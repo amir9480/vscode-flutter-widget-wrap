@@ -1,0 +1,63 @@
+{
+	"name": "flutter-widget-wrap",
+	"displayName": "Flutter widget wrap",
+	"description": "Wrap flutter codes inside Container/Stack.",
+	"version": "0.0.1",
+	"publisher": "amiralizadeh9480",
+	"icon": "images/icon.png",
+	"engines": {
+		"vscode": "^1.35.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:fww.wrapInContainer",
+		"onCommand:fww.wrapInStack"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/amir9480/vscode-flutter-widget-wrap"
+	},
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "fww.wrapInContainer",
+				"title": "Wrap in Container"
+			},
+			{
+				"command": "fww.wrapInStack",
+				"title": "Wrap in Stack"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "fww.wrapInContainer",
+				"key": "alt+c",
+				"mac": "alt+c",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "fww.wrapInStack",
+				"key": "alt+s",
+				"mac": "alt+s",
+				"when": "editorTextFocus"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "yarn run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "yarn run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28",
+		"tslint": "^5.12.1",
+		"@types/node": "^10.12.21",
+		"@types/mocha": "^2.2.42"
+	}
+}
