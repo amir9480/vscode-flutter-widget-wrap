@@ -2,7 +2,7 @@
 	"name": "flutter-widget-wrap",
 	"displayName": "Flutter widget wrap",
 	"description": "Wrap flutter codes inside Container/Stack.",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"publisher": "amiralizadeh9480",
 	"icon": "images/icon.png",
 	"engines": {
