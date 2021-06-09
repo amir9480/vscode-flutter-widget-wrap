@@ -12,7 +12,7 @@ function insertSnippet(before: string, after: string, space: string) {
 	const editor = vscode.window.activeTextEditor;
 	if (editor && editor.selection.start !== editor.selection.end) {
 		var selection = editor.selection;
-		var child =  editor.document.getText(selection).trimLeft();
+		var child =  editor.document.getText(selection).trimLeft().replace(/\$/g, '\\$');
 		var line = editor.document.lineAt(selection.start);
 		child = child.replace(new RegExp("\n\\s{" + line.firstNonWhitespaceCharacterIndex + "}", "gm"), "\n" + space);
 		var replaceText = before + child + after;
